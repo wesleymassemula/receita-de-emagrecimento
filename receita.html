@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equilíbrio Diário</title>
+
+<!-- CSS dentro de pasta assets -->
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+⚠️ Pessoas estão a comprar agora!
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Perca Peso com Saúde</h1>
+    <p>Receitas naturais e simples para transformar seu corpo</p>
+</div>
+
+<!-- CONTADOR -->
+<div class="section">
+<div class="contador">
+👥 <span id="people">23</span> pessoas estão a ver esta oferta agora
+</div>
+</div>
+
+<!-- PROBLEMA -->
+<div class="section">
+    <h2>Dificuldade em emagrecer?</h2>
+    <p>Dietas que não funcionam?</p>
+</div>
+
+<!-- SOLUÇÃO -->
+<div class="section">
+    <h2 class="highlight">A solução está aqui</h2>
+</div>
+
+<!-- IMAGENS -->
+<div class="images">
+    <img src="images/salada.jpg" alt="Salada saudável">
+    <img src="images/frutas.jpg" alt="Frutas frescas">
+    <img src="images/comida.jpg" alt="Refeição saudável">
+    <img src="images/fitness.jpg" alt="Estilo de vida fitness">
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="box">
+    <h2>O que você vai receber</h2>
+    <ul>
+        <li>✔ Receitas saudáveis</li>
+        <li>✔ Emagrecimento natural</li>
+        <li>✔ Fácil de seguir</li>
+    </ul>
+</div>
+
+<!-- PROVA SOCIAL -->
+<div class="testimonials">
+    <h2>Resultados reais</h2>
+
+    <div class="testimonial">
+        <p>"Perdi 5kg facilmente!"</p>
+        <strong>- Ana</strong>
+    </div>
+</div>
+
+<!-- OFERTA -->
+<div class="section">
+    <p class="price">🔥 Oferta especial</p>
+    <div id="timer" class="timer"></div>
+
+    <a class="btn" href="https://go.hotmart.com/A105313343B?dp=1">Comprar Agora</a>
+</div>
+
+<!-- GARANTIA -->
+<div class="section">
+    <h2>Garantia de 7 dias</h2>
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://go.hotmart.com/A105313343B?dp=1" class="floating-btn">
+🔥 QUERO EMAGRECER AGORA
+</a>
+
+<!-- SCRIPT dentro de pasta assets -->
+<script src="assets/script.js"></script>
+
+<footer>
+© 2026 Equilíbrio Diário
+</footer>
+
+</body>
+</html>x;
+    padding: 16px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    z-index: 9999;
+
+    background: linear-gradient(45deg, #d4af37, #ffcc00, #ffb300);
+    background-size: 300% 300%;
+    animation: brilho 3s ease infinite, pulsar 1.5s infinite;
+
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+}
+
+@keyframes brilho {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2e7d32;
+    color: white;
+}
+</style>
+
+<script>
+// TIMER
+let tempo = 600;
+function timer() {
+    let m = Math.floor(tempo / 60);
+    let s = tempo % 60;
+
+    document.getElementById("timer").innerHTML =
+        `Oferta termina em: ${m}:${s < 10 ? '0' : ''}${s}`;
+
+    tempo--;
+    if (tempo >= 0) setTimeout(timer, 1000);
+}
+
+// POPUP
+function popup() {
+    let p = document.getElementById("popup");
+    p.style.display = "block";
+
+    setTimeout(() => {
+        p.style.display = "none";
+    }, 3000);
+}
+
+setInterval(popup, 8000);
+
+// CONTADOR
+let people = 23;
+setInterval(() => {
+    let change = Math.floor(Math.random() * 4);
+
+    if (Math.random() > 0.5) {
+        people += change;
+    } else {
+        people -= change;
+        if (people < 15) people = 15;
+    }
+
+    document.getElementById("people").innerText = people;
+}, 3000);
+
+window.onload = timer;
+</script>
+
+</head>
+
+<body>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+⚠️ Pessoas estão a comprar agora!
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Perca Peso com Saúde</h1>
+    <p>Receitas naturais e simples para transformar seu corpo</p>
+</div>
+
+<!-- CONTADOR -->
+<div class="section">
+<div class="contador">
+👥 <span id="people">23</span> pessoas estão a ver esta oferta agora
+</div>
+</div>
+
+<!-- PROBLEMA -->
+<div class="section">
+    <h2>Dificuldade em emagrecer?</h2>
+    <p>Dietas que não funcionam?</p>
+</div>
+
+<!-- SOLUÇÃO -->
+<div class="section">
+    <h2 class="highlight">A solução está aqui</h2>
+</div>
+
+<!-- IMAGENS -->
+<div class="images">
+    <img src="images/salada.jpg">
+    <img src="images/frutas.jpg">
+    <img src="images/comida.jpg">
+    <img src="images/fitness.jpg">
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="box">
+    <h2>O que você vai receber</h2>
+    <ul>
+        <li>✔ Receitas saudáveis</li>
+        <li>✔ Emagrecimento natural</li>
+        <li>✔ Fácil de seguir</li>
+    </ul>
+</div>
+
+<!-- PROVA SOCIAL -->
+<div class="testimonials">
+    <h2>Resultados reais</h2>
+
+    <div class="testimonial">
+        <p>"Perdi 5kg facilmente!"</p>
+        <strong>- Ana</strong>
+    </div>
+</div>
+
+<!-- OFERTA -->
+<div class="section">
+    <p class="price">🔥 Oferta especial</p>
+    <div id="timer" class="timer"></div>
+
+    <a class="btn" href="https://go.hotmart.com/A105313343B?dp=1">Comprar Agora</a>
+</div>
+
+<!-- GARANTIA -->
+<div class="section">
+    <h2>Garantia de 7 dias</h2>
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://go.hotmart.com/A105313343B?dp=1" class="floating-btn">
+🔥 QUERO EMAGRECER AGORA
+</a>
+
+<footer>
+© 2026 Equilíbrio Diário
+</footer>
+
+</body>
+</html>

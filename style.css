@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4fff6;
+    color: #222;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(90deg, #00c853, #2e7d32);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.highlight {
+    color: #00c853;
+    font-weight: bold;
+}
+
+/* IMAGENS */
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* BOX */
+.box {
+    background: white;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* TESTIMONIAL */
+.testimonials {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.testimonial {
+    background: #f1f8f4;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+/* PRICE */
+.price {
+    font-size: 32px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* TIMER */
+.timer {
+    font-size: 20px;
+    color: red;
+}
+
+/* BUTTON */
+.btn {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin: 12px auto;
+    padding: 18px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* CONTADOR */
+.contador {
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+    z-index: 10000;
+}
+
+/* BOTÃO FLUTUANTE */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    z-index: 9999;
+
+    background: linear-gradient(45deg, #d4af37, #ffcc00, #ffb300);
+    background-size: 300% 300%;
+    animation: brilho 3s ease infinite, pulsar 1.5s infinite;
+
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+}
+
+@keyframes brilho {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2e7d32;
+    color: white;
+}
